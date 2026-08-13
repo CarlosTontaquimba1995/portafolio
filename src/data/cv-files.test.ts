@@ -6,11 +6,13 @@ import cvEs from '../../scripts/cv-es.html?raw'
 const portfolioUrl = 'https://portafolio-66g7.onrender.com/'
 
 describe('CV source documents', () => {
-  it('includes the live portfolio URL in the English CV', () => {
+  it('includes a labeled portfolio link in the English CV', () => {
+    expect(cvEn).toContain(`Portfolio:`)
     expect(cvEn).toContain(portfolioUrl)
   })
 
-  it('includes the live portfolio URL in the Spanish CV', () => {
+  it('includes a labeled portfolio link in the Spanish CV', () => {
+    expect(cvEs).toContain(`Portafolio:`)
     expect(cvEs).toContain(portfolioUrl)
   })
 })
