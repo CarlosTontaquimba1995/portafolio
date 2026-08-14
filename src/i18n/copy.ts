@@ -21,7 +21,6 @@ export interface UiCopy {
     architect: string
     about: string
     stack: string
-    profileAlt: string
   }
   experience: {
     title: string
@@ -91,8 +90,6 @@ export const copies: Record<'en' | 'es', UiCopy> = {
       architect: 'Systems Architect',
       about: 'About me',
       stack: 'Core Stack',
-      profileAlt:
-        'Professional portrait of a software engineer in a dark setting with blue lighting.',
     },
     experience: {
       title: 'Professional Experience',
@@ -163,8 +160,6 @@ export const copies: Record<'en' | 'es', UiCopy> = {
       architect: 'Arquitecto de Sistemas',
       about: 'Sobre mí',
       stack: 'Stack Principal',
-      profileAlt:
-        'Retrato profesional de un ingeniero de software en un entorno oscuro con iluminación azul.',
     },
     experience: {
       title: 'Experiencia Profesional',

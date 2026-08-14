@@ -30,6 +30,10 @@ describe('single-page portfolio content', () => {
     expect(screen.getByRole('link', { name: /Download CV/i })).toHaveClass(
       'btn-primary',
     )
+    expect(screen.getByText('Systems Architect')).toBeInTheDocument()
+    expect(
+      document.querySelector('img[src="/images/profile.webp"]'),
+    ).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'About me' })).toBeInTheDocument()
     expect(
       document.querySelectorAll('#experiencia article'),

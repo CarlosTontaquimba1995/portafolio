@@ -51,14 +51,8 @@ export function HomePage() {
           </div>
         </BentoCard>
 
-        <BentoCard className="relative flex min-h-[300px] items-center justify-center overflow-hidden md:col-span-4">
-          <div className="absolute inset-0 bg-gradient-to-br from-surface-container-high to-surface-container-lowest opacity-50" />
-          <img
-            alt={copy.home.profileAlt}
-            className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-overlay"
-            src="/images/profile.webp"
-          />
-          <div className="relative z-10 flex flex-col items-center">
+        <BentoCard className="relative flex min-h-[300px] items-center justify-center md:col-span-4">
+          <div className="flex flex-col items-center">
             <MaterialIcon
               className="mb-4 text-4xl text-primary"
               filled

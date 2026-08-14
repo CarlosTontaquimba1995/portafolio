@@ -175,16 +175,9 @@ test('the single page matches the approved visual composition', async ({
   })
 })
 
-test('a failed profile image keeps a usable visual container', async ({
-  page,
-}) => {
-  await page.route('**/images/profile.webp', (route) => route.abort())
+test('the architect card has no background portrait', async ({ page }) => {
   await page.goto('/')
 
-  const image = page.getByAltText(
-    'Professional portrait of a software engineer in a dark setting with blue lighting.',
-  )
-  await expect(image).toHaveAttribute('alt', /Professional portrait/)
-  const container = await image.locator('..').boundingBox()
-  expect(container?.height).toBeGreaterThanOrEqual(299)
+  await expect(page.getByText('Systems Architect')).toBeVisible()
+  await expect(page.locator('img[src="/images/profile.webp"]')).toHaveCount(0)
 })
